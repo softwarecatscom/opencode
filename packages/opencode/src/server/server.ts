@@ -261,7 +261,7 @@ export namespace Server {
           }),
         ),
       )
-      .use(WorkspaceRouterMiddleware)
+      .use(WorkspaceRouterMiddleware(ws.upgradeWebSocket))
       .route("/project", ProjectRoutes())
       // .route("/pty", PtyRoutes())
       .route("/config", ConfigRoutes())
